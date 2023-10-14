@@ -1,5 +1,12 @@
 import React from "react";
-import { Hero, Destinations, Search, Selects } from "@/components";
+import {
+  Hero,
+  Destinations,
+  Search,
+  Selects,
+  Carousel,
+  Footer,
+} from "@/components";
 
 const page = () => {
   return (
@@ -8,6 +15,8 @@ const page = () => {
       <Destinations />
       <Search />
       <Selects />
+      <Carousel />
+      <Footer />
     </main>
   );
 };

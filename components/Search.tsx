@@ -26,7 +26,7 @@ const Search = () => {
             </button>
             <div>
               <h3 className="uppercase py-2">Leading Service</h3>
-              <p className="uppercase py-1">
+              <p className="uppercase py-1 px-2">
                 All-inclusive company for 20 years in-a-row
               </p>
             </div>
@@ -37,7 +37,7 @@ const Search = () => {
             </button>
             <div>
               <h3 className="uppercase py-2">Leading Service</h3>
-              <p className="uppercase py-1">
+              <p className="uppercase py-1 px-2">
                 All-inclusive company for 20 years in-a-row
               </p>
             </div>

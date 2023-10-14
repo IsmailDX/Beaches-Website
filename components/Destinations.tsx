@@ -8,7 +8,10 @@ import Image from "next/image";
 
 const Destinations = () => {
   return (
-    <div className="max-w-[1240px] mx-autp py-16 px-4 text-center">
+    <div
+      className="max-w-[1240px] mx-auto py-16 px-4 text-center"
+      id="Destinations"
+    >
       <h1>All-Inclusive Resorts</h1>
       <p className="py-4">On the Caribbean's Best Beaches</p>
       <div className="grid grid-rows-none md:grid-cols-5 py-4 gap-2 md:gap-4">

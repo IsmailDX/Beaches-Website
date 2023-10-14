@@ -28,7 +28,9 @@ const NavBar = () => {
         </div>
         <ul className="hidden md:flex">
           <li>Home</li>
-          <li>Destinations</li>
+          <li>
+            <a href="#Destinations">Destinations</a>
+          </li>
           <li>Travel</li>
           <li>View</li>
           <li>Book</li>
@@ -46,14 +48,17 @@ const NavBar = () => {
         </div>
         {/* Mobile Menu */}
         <div
-          className={`absolute text-black left-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col transition-all ease-in-out duration-300 ${
+          className={`absolute text-black left-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col md:hidden
+          transition-all ease-in-out duration-300 ${
             nav ? "top-0" : "-top-[605px]"
           }`}
         >
           <ul>
             <h1>BEACHES.</h1>
             <li className="border-b">Home</li>
-            <li className="border-b">Destinations</li>
+            <li className="border-b">
+              <a href="#Destinations">Destinations</a>
+            </li>
             <li className="border-b">Travel</li>
             <li className="border-b">View</li>
             <li className="border-b">Book</li>
