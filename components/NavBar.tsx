@@ -47,7 +47,7 @@ const NavBar = () => {
         {/* Mobile Menu */}
         <div
           className={`absolute text-black left-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col transition-all ease-in-out duration-300 ${
-            nav ? "top-0" : "-top-[600px]"
+            nav ? "top-0" : "-top-[605px]"
           }`}
         >
           <ul>
