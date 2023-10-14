@@ -22,14 +22,14 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex justify-between">
-          <ul className="lg:flex">
+          <ul className="lg:flex border-none">
             <li>About</li>
             <li>Partnerships</li>
             <li>Careers</li>
             <li>Newsroom</li>
             <li>Advertising</li>
           </ul>
-          <ul className="lg:flex">
+          <ul className="lg:flex border-none">
             <li className="border-b">Home</li>
             <li className="border-b">Destinations</li>
             <li className="border-b">Travel</li>
