@@ -1,9 +1,13 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { MdOutlineTravelExplore } from "react-icons/md";
 import { Selector } from "./index";
 
 const Search = () => {
+  const [checkInDate, setCheckInDate] = useState("mm/dd/yyyy");
+  const [checkOutDate, setCheckOutDate] = useState("mm/dd/yyyy");
+
   return (
     <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-4 px-4 py-16">
       <div className="lg:col-span-2 flex flex-col justify-evenly">
@@ -61,11 +65,21 @@ const Search = () => {
           </div>
           <div className="flex flex-col my-4">
             <label htmlFor="check-in">Check-In</label>
-            <input id="check-in" type="date" placeholder="mm/dd/yyyy" />
+            <input
+              id="check-in"
+              type="date"
+              value={checkInDate}
+              onChange={(e) => setCheckInDate(e.target.value)}
+            />
           </div>
           <div className="flex flex-col my-2">
             <label htmlFor="check-out">Check-Out</label>
-            <input id="check-out" type="date" placeholder="mm/dd/yyyy" />
+            <input
+              id="check-out"
+              type="date"
+              value={checkOutDate}
+              onChange={(e) => setCheckOutDate(e.target.value)}
+            />
           </div>
 
           <button className="w-full my-4">Rates & Availabilities</button>
