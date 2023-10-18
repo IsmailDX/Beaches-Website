@@ -30,11 +30,11 @@ const Footer = () => {
             <li>Advertising</li>
           </ul>
           <ul className="lg:flex border-none">
-            <li className="border-b">Home</li>
-            <li className="border-b">Destinations</li>
-            <li className="border-b">Travel</li>
-            <li className="border-b">View</li>
-            <li className="border-b">Book</li>
+            <li>Home</li>
+            <li>Destinations</li>
+            <li>Travel</li>
+            <li>View</li>
+            <li>Book</li>
           </ul>
         </div>
       </div>

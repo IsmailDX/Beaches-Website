@@ -44,11 +44,11 @@ const Carousel = () => {
     <div className="max-w-screen-xl mx-auto px-4 py-16 relative flex justify-center items-center overflow-hidden">
       <BsFillArrowLeftCircleFill
         onClick={prevSlide}
-        className="absolute top-1/2 left-8 text-3xl text-white cursor-pointer"
+        className="absolute top-1/2 left-8 text-3xl text-white cursor-pointer select-none"
       />
       <BsFillArrowRightCircleFill
         onClick={nextSlide}
-        className="absolute top-1/2 right-8 text-3xl text-white cursor-pointer"
+        className="absolute top-1/2 right-8 text-3xl text-white cursor-pointer select-none"
       />
 
       {sliderData.map((item, index) => (
@@ -56,15 +56,15 @@ const Carousel = () => {
           key={index}
           className={
             index === slide
-              ? "opacity-100 transition ease-in-out duration-300"
-              : "opacity-0"
+              ? "opacity-100 transition ease-in-out duration-300 select-none"
+              : "opacity-0 select-none"
           }
         >
           {index === slide && (
             <img
               src={item.url}
               alt=""
-              className="w-full h-full rounded-md object-cover"
+              className="w-full h-full rounded-md object-cover select-none"
             />
           )}
         </div>

@@ -10,6 +10,7 @@ const Hero = () => {
         autoPlay
         loop
         muted
+        preload="auto"
       />
       <div className="absolute w-full h-full top-0 left-0 bg-gray-900/40">
         <div className="absolute top-0 w-full h-full flex flex-col justify-center text-center p-4">

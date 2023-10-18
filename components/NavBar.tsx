@@ -48,13 +48,13 @@ const NavBar = () => {
         </div>
         {/* Mobile Menu */}
         <div
-          className={`absolute text-black left-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col md:hidden
+          className={`fixed text-black left-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col md:hidden
           transition-all ease-in-out duration-300 ${
-            nav ? "top-0" : "-top-[605px]"
+            nav ? "top-0" : "-top-[100%]"
           }`}
         >
           <ul>
-            <h1>BEACHES.</h1>
+            <h1 className="mx-auto">BEACHES.</h1>
             <li className="border-b">Home</li>
             <li className="border-b">
               <a href="#Destinations">Destinations</a>
