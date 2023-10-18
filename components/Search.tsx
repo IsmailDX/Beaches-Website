@@ -5,8 +5,18 @@ import { MdOutlineTravelExplore } from "react-icons/md";
 import { Selector } from "./index";
 
 const Search = () => {
-  const [checkInDate, setCheckInDate] = useState("mm/dd/yyyy");
-  const [checkOutDate, setCheckOutDate] = useState("mm/dd/yyyy");
+  const [checkInDate, setCheckInDate] = useState("");
+  const [checkOutDate, setCheckOutDate] = useState("");
+
+  // Event handler to set the check-in date
+  const handleCheckInChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCheckInDate(e.target.value);
+  };
+
+  // Event handler to set the check-out date
+  const handleCheckOutChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setCheckOutDate(e.target.value);
+  };
 
   return (
     <div className="max-w-[1240px] mx-auto grid lg:grid-cols-3 gap-4 px-4 py-16">
@@ -69,7 +79,7 @@ const Search = () => {
               id="check-in"
               type="date"
               value={checkInDate}
-              onChange={(e) => setCheckInDate(e.target.value)}
+              onChange={handleCheckInChange}
             />
           </div>
           <div className="flex flex-col my-2">
@@ -78,7 +88,7 @@ const Search = () => {
               id="check-out"
               type="date"
               value={checkOutDate}
-              onChange={(e) => setCheckOutDate(e.target.value)}
+              onChange={handleCheckOutChange}
             />
           </div>
 
