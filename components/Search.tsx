@@ -1,21 +1,45 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { MdOutlineTravelExplore } from "react-icons/md";
 import { Selector } from "./index";
 
 const Search = () => {
-  const defaultDate = "yyyy-mm-dd";
-  const [checkInDate, setCheckInDate] = useState(defaultDate);
-  const [checkOutDate, setCheckOutDate] = useState(defaultDate);
+  const [checkInDate, setCheckInDate] = useState("");
+  const [checkOutDate, setCheckOutDate] = useState("");
+
+  // Function to format the date as "yyyy-MM-dd"
+  const formatDate = (date: Date) => {
+    const yyyy = date.getFullYear();
+    const mm = String(date.getMonth() + 1).padStart(2, "0");
+    const dd = String(date.getDate()).padStart(2, "0");
+    return `${yyyy}-${mm}-${dd}`;
+  };
+
+  // Function to get today's date in the desired format
+  const getTodayDate = () => {
+    const today = new Date();
+    return formatDate(today);
+  };
+
+  useEffect(() => {
+    // Set the default values to today's date
+    const today = getTodayDate();
+    setCheckInDate(today);
+    setCheckOutDate(today);
+  }, []);
 
   // Event handler to set the check-in date
-  const handleCheckInChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleCheckInChange = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setCheckInDate(e.target.value);
   };
 
   // Event handler to set the check-out date
-  const handleCheckOutChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleCheckOutChange = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setCheckOutDate(e.target.value);
   };
 
