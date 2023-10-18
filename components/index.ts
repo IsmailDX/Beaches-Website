@@ -7,6 +7,7 @@ import SelectsCard from "./SelectsCard";
 import Carousel from "./Carousel";
 import Footer from "./Footer";
 import LoadingScreen from "./LoadingScreen";
+import Selector from "./Selector";
 
 export {
   NavBar,
@@ -18,4 +19,5 @@ export {
   Carousel,
   Footer,
   LoadingScreen,
+  Selector,
 };

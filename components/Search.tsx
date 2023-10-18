@@ -1,6 +1,7 @@
 import React from "react";
 import { RiCustomerService2Fill } from "react-icons/ri";
 import { MdOutlineTravelExplore } from "react-icons/md";
+import { Selector } from "./index";
 
 const Search = () => {
   return (
@@ -55,21 +56,16 @@ const Search = () => {
         </div>
         <form className="w-full">
           <div className="flex flex-col my-2">
-            <label>Destination</label>
-            <select className="border rounded-md p-2">
-              <option>Grand Antigua</option>
-              <option>Key West</option>
-              <option>Maldives</option>
-              <option>Cozumel</option>
-            </select>
+            <label htmlFor="destination">Destination</label>
+            <Selector />
           </div>
           <div className="flex flex-col my-4">
-            <label>Check-In</label>
-            <input className="border rounded-md p-2 w-full" type="date"></input>
+            <label htmlFor="check-in">Check-In</label>
+            <input id="check-in" type="date" />
           </div>
           <div className="flex flex-col my-2">
-            <label>Check-Out</label>
-            <input className="border rounded-md p-2 w-full" type="date"></input>
+            <label htmlFor="check-out">Check-Out</label>
+            <input id="check-out" type="date" />
           </div>
 
           <button className="w-full my-4">Rates & Availabilities</button>
