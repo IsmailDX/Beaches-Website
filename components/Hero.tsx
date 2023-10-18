@@ -4,14 +4,15 @@ import { AiOutlineSearch } from "react-icons/ai";
 const Hero = () => {
   return (
     <div className="w-full h-screen relative">
-      <video
-        src="/beachVid.mp4"
-        className="w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-        preload="auto"
-        playsInline
+      <div
+        dangerouslySetInnerHTML={{
+          __html: `
+      <video class="appbackgroundVideo" autoplay loop muted playsinline>
+        <source src="/beachVid.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    `,
+        }}
       />
       <div className="absolute w-full h-full top-0 left-0 bg-gray-900/40">
         <div className="absolute top-0 w-full h-full flex flex-col justify-center text-center p-4">
