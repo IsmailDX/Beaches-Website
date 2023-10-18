@@ -5,8 +5,9 @@ import { MdOutlineTravelExplore } from "react-icons/md";
 import { Selector } from "./index";
 
 const Search = () => {
-  const [checkInDate, setCheckInDate] = useState("");
-  const [checkOutDate, setCheckOutDate] = useState("");
+  const defaultDate = "yyyy-mm-dd";
+  const [checkInDate, setCheckInDate] = useState(defaultDate);
+  const [checkOutDate, setCheckOutDate] = useState(defaultDate);
 
   // Event handler to set the check-in date
   const handleCheckInChange = (e: React.ChangeEvent<HTMLInputElement>) => {
