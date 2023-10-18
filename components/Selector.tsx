@@ -10,7 +10,7 @@ const Selector = () => {
   return (
     <div className="w-full relative">
       <div
-        className="bg-white w-full p-2 flex items-center justify-between border-2 border-gray-300 rounded"
+        className="bg-white w-full p-2 flex items-center justify-between border-2 border-gray-300 rounded whitespace-nowrap"
         onClick={() => setOpen(!open)}
       >
         {selected ? selected : "Select destination"}

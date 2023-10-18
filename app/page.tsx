@@ -6,7 +6,6 @@ import {
   Selects,
   Carousel,
   Footer,
-  LoadingScreen,
 } from "@/components";
 
 const page = () => {
