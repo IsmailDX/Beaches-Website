@@ -9,11 +9,14 @@ const Hero = () => {
           __html: `
       <video class="appbackgroundVideo" autoplay loop muted playsinline>
         <source src="/beachVid.mp4" type="video/mp4" />
+        <source src="/beachVid.webm" type="video/webm" />
+        <source src="/beachVid.ogv" type="video/ogg" />
         Your browser does not support the video tag.
       </video>
     `,
         }}
       />
+
       <div className="absolute w-full h-full top-0 left-0 bg-gray-900/40">
         <div className="absolute top-0 w-full h-full flex flex-col justify-center text-center p-4">
           <h1 className="text-white">First Class Travel</h1>
